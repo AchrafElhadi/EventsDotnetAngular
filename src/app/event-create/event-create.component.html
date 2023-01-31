@@ -1,0 +1,27 @@
+<div class="container" style="margin-top: 5%; width: 50%;">
+
+    <form [formGroup]="eventfromgroup" (ngSubmit)="CreateEvent()">
+        <div class="form-group mb-2">
+        <label for="exampleInputEmail1">Titre</label>
+        <input type="text" class="form-control" formControlName="nom" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group mb-2">
+        <label for="exampleInputPassword1">Ville</label>
+        <input type="text" class="form-control" formControlName="ville" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group mb-2">
+            <label for="exampleInputPassword1">Description</label>
+            <input type="text" class="form-control" formControlName="description" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group mb-2">
+            <label for="exampleInputPassword1">Nombre de place</label>
+            <input type="text" class="form-control" formControlName="nb_place" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group mb-2">
+            <label for="exampleInputPassword1">Date</label>
+            <input type="date" class="form-control" formControlName="date" id="exampleInputPassword1" placeholder="Password">
+        </div>
+    
+        <button type="submit" class="btn btn-primary" style="width: 100%; background-color: #101065;">Create</button>
+    </form>
+</div>

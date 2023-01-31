@@ -1,0 +1,28 @@
+<div class="container" style="margin-top:5% ;">
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">nom</th>
+                <th scope="col">ville</th>
+                <th scope="col">description</th>
+                <th scope="col">date</th>
+                <th></th>
+                <th></th>
+              </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let e of events">
+                
+                <td>{{e.id}}</td>
+                <td>{{e.nom}}</td>
+                <td>{{e.ville}}</td>
+                <td>{{e.description}} </td>
+                <td>{{e.date}}</td>
+                <td><button class="btn btn-danger" (click)="Delete(e.id)"><i class="bi bi-trash"></i> Delete</button></td>
+                <td><a routerLink="/events/{{e.id}}" class="btn btn-success"><i class="bi bi-pencil-square"></i> Edit</a></td>
+
+              </tr>
+        </tbody>
+    </table>
+</div>
